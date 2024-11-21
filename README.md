@@ -4,3 +4,5 @@
 <a href="https://codeclimate.com/github/NastyaSia04/frontend-project-44/maintainability"><img src="https://api.codeclimate.com/v1/badges/840f8a9fe6bde1e46676/maintainability" /></a>
 
 <a href="https://asciinema.org/a/Qg990JnpLHfQnoT4sqWFbNI9n" target="_blank"><img src="https://asciinema.org/a/Qg990JnpLHfQnoT4sqWFbNI9n.svg" /></a>
+
+<a href="https://asciinema.org/a/YirIBlY7m6lcVIoMW8v9Crahu" target="_blank"><img src="https://asciinema.org/a/YirIBlY7m6lcVIoMW8v9Crahu.svg" /></a>
