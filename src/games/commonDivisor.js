@@ -29,7 +29,7 @@ const getRandomExpression = () => {
   return [expression, gcd.toString()];
 };
 
-/* создет массив с вопросом и корректным ответом */
+/* возвращает массив с вопросом и корректным ответом */
 const getQuiz = () => {
   const [question, correctAnswer] = getRandomExpression();
   return [question, correctAnswer];

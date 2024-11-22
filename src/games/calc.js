@@ -2,7 +2,7 @@ import game from '../index.js';
 
 const description = 'What is the result of the expression?';
 
-/*  создает случайное число */
+/*  функция возвращает случайное число */
 const getRandomNumber = (min, max) => {
   const randomNumber = Math.floor(Math.random() * (max - min) + min);
   return randomNumber;
@@ -38,7 +38,7 @@ const getRandomExpression = () => {
   return [expression, result.toString()];
 };
 
-/* создет массив с вопросом и корректным ответом */
+/* возвращает массив с вопросом и корректным ответом */
 const getQuiz = () => {
   const [question, correctAnswer] = getRandomExpression();
   return [question, correctAnswer];
