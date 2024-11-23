@@ -18,4 +18,5 @@ export default (description, getQuiz) => {
     console.log('Correct!');
   }
   console.log(`Congratulations, ${userName}!`);
+  return (description, getQuiz);
 };
