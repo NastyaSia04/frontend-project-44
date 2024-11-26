@@ -5,23 +5,24 @@
 
 **Description:**
 
-This is the first educational project at Hexlet. It consists of 5 games: brain-even, brain-calc, brain-gcd, brain-progression, brain-prime.
+This is the first educational project at Hexlet.\
+It consists of 5 games: brain-even, brain-calc, brain-gcd, brain-progression, brain-prime.
 
 **Requirements:**
 
 version Node.js - v22.9.0;\
-version NPM - 10.9.0.\
+version NPM - 10.9.0.
 
 **Instrictions:**
 
 * clone the repository:\
-```git clone git@github.com:NastyaSia04/frontend-project-44.git```\
+```git clone git@github.com:NastyaSia04/frontend-project-44.git```
 * go to the root directory of the project:\
-```cd frontend-project-44```\
+```cd frontend-project-44```
 * install the package:\
-```npm link```\
+```npm link```
 * start game:\
-enter "brain-even" in your command-line.\
+enter *"brain-even"* in your command-line.\
 Follow the instrictions of the game.
 
 Start of the other games is similar.
