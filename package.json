@@ -10,7 +10,7 @@
     "brain-prime": "bin/brain-prime.js"
   },
   "type": "module",
-  "description": "[![Actions Status](https://github.com/NastyaSia04/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/NastyaSia04/frontend-project-44/actions)",
+  "description": "First educational project with games. It includes games under the names: brain-even, brain-calc, brain-gcd, brain-progression, brain-prime",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
