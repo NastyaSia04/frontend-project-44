@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import division from '../src/games/commonDivisor.js';
+import divide from '../src/games/commonDivisor.js';
 
-division();
+divide();
