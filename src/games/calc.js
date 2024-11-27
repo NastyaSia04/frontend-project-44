@@ -1,50 +1,42 @@
 import game from '../index.js';
+import getRandomNumber from '../../utils.js';
 
-const description = 'What is the result of the expression?';
+const gameDescription = 'What is the result of the expression?';
 
-/*  функция возвращает случайное число */
-const getRandomNumber = (min, max) => {
-  const randomNumber = Math.floor(Math.random() * (max - min) + min);
-  return randomNumber;
-};
-
-/*  возвращает случайный оператор   */
 const getRandomOperator = () => {
-  const operators = ['+', '-', '*'];
-  const randomSign = getRandomNumber(0, (operators.length - 1));
-  return operators[randomSign];
+  const operatorsList = ['+', '-', '*'];
+  const indexOperator = getRandomNumber(0, (operatorsList.length - 1));
+  return operatorsList[indexOperator];
 };
 
-/*  создает 2 случайных числа, выбирает случайный оператор, формирует строку выражения,
-вычисляет результат выражения. Возвращает массив с выражением и его результатом   */
-const getRandomExpression = () => {
-  const numberOne = getRandomNumber(1, 99);
-  const numberTwo = getRandomNumber(1, 99);
-  const sign = getRandomOperator();
-  const expression = `${numberOne} ${sign} ${numberTwo}`;
+const getExpression = (num1, num2, operator) => {
   let result;
-  switch (sign) {
+  switch (operator) {
     case '+':
-      result = numberOne + numberTwo;
+      result = num1 + num2;
       break;
     case '-':
-      result = numberOne - numberTwo;
+      result = num1 - num2;
       break;
     case '*':
-      result = numberOne * numberTwo;
+      result = num1 * num2;
       break;
-    // no default
+      // no default
   }
-  return [expression, result.toString()];
+  return result;
 };
 
-/* возвращает массив с вопросом и корректным ответом */
-const getQuiz = () => {
-  const [question, correctAnswer] = getRandomExpression();
-  return [question, correctAnswer];
+const getResultExpression = () => {
+  const operator = getRandomOperator();
+  const minValue = 1;
+  const maxValue = 99;
+  const number1 = getRandomNumber(minValue, maxValue);
+  const number2 = getRandomNumber(minValue, maxValue);
+  const expression = `${number1} ${operator} ${number2}`;
+  const resultExpression = getExpression(number1, number2, operator);
+  return [expression, resultExpression.toString()];
 };
 
-/* экспортируется по умолчанию функция игры с заданным описанием и квизом */
 export default () => {
-  game(description, getQuiz);
+  game(gameDescription, getResultExpression);
 };

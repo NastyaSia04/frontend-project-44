@@ -1,14 +1,8 @@
 import game from '../index.js';
+import getRandomNumber from '../../utils.js';
 
-const description = 'Find the greatest common divisor of given numbers.';
+const gameDescription = 'Find the greatest common divisor of given numbers.';
 
-/* возвращает случайное число */
-const getRandomNumber = (min, max) => {
-  const randomNumber = Math.floor(Math.random() * (max - min) + min);
-  return randomNumber;
-};
-
-/* вычисляет наибольший общий делитель */
 const getGcd = (num1, num2) => {
   let i = Math.min(num1, num2);
   for (i; i >= 1; i -= 1) {
@@ -19,23 +13,16 @@ const getGcd = (num1, num2) => {
   return 1;
 };
 
-/* создает два рандомных числа, формирует выражение, вычисляет НОД.
-Возвращает выражение и его результат */
-const getRandomExpression = () => {
-  const numberOne = getRandomNumber(1, 50);
-  const numberTwo = getRandomNumber(1, 50);
-  const expression = `${numberOne} ${numberTwo}`;
+const getGcdNumbers = () => {
+  const minValue = 1;
+  const maxValue = 50;
+  const numberOne = getRandomNumber(minValue, maxValue);
+  const numberTwo = getRandomNumber(minValue, maxValue);
+  const displayedNumbersCount = `${numberOne} ${numberTwo}`;
   const gcd = getGcd(numberOne, numberTwo);
-  return [expression, gcd.toString()];
+  return [displayedNumbersCount, gcd.toString()];
 };
 
-/* возвращает массив с вопросом и корректным ответом */
-const getQuiz = () => {
-  const [question, correctAnswer] = getRandomExpression();
-  return [question, correctAnswer];
-};
-
-/* экспортируется по умолчанию функция игры с заданным описанием и квизом */
 export default () => {
-  game(description, getQuiz);
+  game(gameDescription, getGcdNumbers);
 };

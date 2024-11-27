@@ -1,14 +1,8 @@
 import game from '../index.js';
+import getRandomNumber from '../../utils.js';
 
-const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-/*  возвращается случайное число */
-const getRandomNumber = (min, max) => {
-  const randomNumber = Math.floor(Math.random() * (max - min) + min);
-  return randomNumber;
-};
-
-/* вычисляет является ли число простым (true - простое) */
 const isPrime = (num) => {
   if (num <= 1) {
     return false;
@@ -21,32 +15,14 @@ const isPrime = (num) => {
   return true;
 };
 
-/* Создает случайное число, проверяет является ли это число простым.
-Вычисляет результат ('yes' или 'no').
-Возвращает масссив с двумя элементами: число и результат его проверки */
 const getIsPrimeNumber = () => {
-  const number = getRandomNumber(0, 100);
-  const isPrimeNum = isPrime(number);
-  let result;
-  switch (isPrimeNum) {
-    case true:
-      result = 'yes';
-      break;
-    case false:
-      result = 'no';
-      break;
-    // no default
-  }
-  return [number, result];
+  const minNumber = 0;
+  const maxNumber = 100;
+  const displayedNumber = getRandomNumber(minNumber, maxNumber);
+  const isPrimeValue = (isPrime(displayedNumber) ? 'yes' : 'no');
+  return [displayedNumber, isPrimeValue];
 };
 
-/* возвращает массив с вопросом и корректным ответом */
-const getQuiz = () => {
-  const [question, correctAnswer] = getIsPrimeNumber();
-  return [question, correctAnswer];
-};
-
-/* экспортируется по умолчанию функция игры с заданным описанием и квизом */
 export default () => {
-  game(description, getQuiz);
+  game(gameDescription, getIsPrimeNumber);
 };
