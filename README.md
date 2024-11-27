@@ -22,8 +22,10 @@ version NPM - 10.9.0.
 * install the package:\
 ```npm link```
 * start game:\
-enter *"brain-even"* in your command-line.\
-Follow the instrictions of the game.
+enter *"brain-even"* in your command-line.
+
+Follow the instrictions of the game.\
+Each game consists of three rounds.
 
 Start of the other games is similar.
 
