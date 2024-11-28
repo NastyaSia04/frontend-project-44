@@ -1,5 +1,5 @@
-import game from '../index.js';
-import getRandomNumber from '../../utils.js';
+import print from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const gameDescription = 'What is the result of the expression?';
 
@@ -10,20 +10,16 @@ const getRandomOperator = () => {
 };
 
 const getExpression = (num1, num2, operator) => {
-  let result;
   switch (operator) {
     case '+':
-      result = num1 + num2;
-      break;
+      return num1 + num2;
     case '-':
-      result = num1 - num2;
-      break;
+      return num1 - num2;
     case '*':
-      result = num1 * num2;
-      break;
-      // no default
+      return num1 * num2;
+    default:
+      throw new Error(`Unknown operator: '${operator}'!`);
   }
-  return result;
 };
 
 const getResultExpression = () => {
@@ -38,5 +34,5 @@ const getResultExpression = () => {
 };
 
 export default () => {
-  game(gameDescription, getResultExpression);
+  print(gameDescription, getResultExpression);
 };

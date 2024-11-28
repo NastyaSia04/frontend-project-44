@@ -1,5 +1,5 @@
-import game from '../index.js';
-import getRandomNumber from '../../utils.js';
+import print from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const gameDescription = 'What number is missing in the progression?';
 
@@ -35,5 +35,5 @@ const getHiddenNumberProgr = () => {
 };
 
 export default () => {
-  game(gameDescription, getHiddenNumberProgr);
+  print(gameDescription, getHiddenNumberProgr);
 };

@@ -1,5 +1,5 @@
-import game from '../index.js';
-import getRandomNumber from '../../utils.js';
+import print from '../index.js';
+import getRandomNumber from '../utils.js';
 
 const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -14,5 +14,5 @@ const getIsEvenNumber = () => {
 };
 
 export default () => {
-  game(gameDescription, getIsEvenNumber);
+  print(gameDescription, getIsEvenNumber);
 };
