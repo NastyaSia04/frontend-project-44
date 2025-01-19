@@ -11,7 +11,7 @@
   },
   "type": "module",
   "description": "First educational project with games. It includes games under the names: brain-even, brain-calc, brain-gcd, brain-progression, brain-prime",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
